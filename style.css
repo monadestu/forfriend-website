@@ -1,0 +1,212 @@
+/* ปรับให้ใช้ฟอนต์เดียวกันทั้งหมด */
+body {
+  font-family: 'Kanit', sans-serif; /* ฟอนต์เดียวกันทั่วทั้งเว็บไซต์ */
+  background-color: #F8C9D2; /* สีชมพูพาสเทล */
+  color: #5D5D5D; /* สีเทาเข้มสำหรับข้อความ */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* จัดข้อความทั้งหมดให้ตรงกลาง */
+  line-height: 1.6; /* เพิ่มระยะห่างบรรทัดเพื่อให้อ่านง่าย */
+}
+
+/* ส่วน Header */
+header {
+  background-color: #FFB6C1; /* สีชมพูอ่อน */
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 5px solid #FF69B4; /* ขอบด้านล่างเพื่อให้ดูคมชัด */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเพื่อความลึก */
+}
+
+header h1 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+  text-transform: uppercase; /* ตัวอักษรพิมพ์ใหญ่ทั้งหมด */
+}
+
+/* เมนู Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+}
+
+nav ul li a:hover {
+  color: #FF69B4; /* เปลี่ยนสีเมื่อเลื่อนเมาส์ไป */
+}
+
+/* ส่วนหัวข้อ */
+h2, h3 {
+  color: #FF69B4;
+  font-size: 28px;
+  margin: 30px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center; /* ทำให้หัวข้ออยู่ตรงกลาง */
+}
+
+/* ส่วนของข้อความเนื้อหา */
+p {
+  font-size: 18px;
+  margin: 20px auto;
+  max-width: 800px; /* จำกัดความกว้างของข้อความเพื่อให้ไม่กว้างเกินไป */
+  color: #5D5D5D;
+  line-height: 1.8; /* เพิ่มระยะห่างบรรทัดให้ชัดเจนขึ้น */
+  text-align: center; /* ทำให้ข้อความอยู่ตรงกลาง */
+}
+
+/* ปุ่ม */
+button {
+  background-color: #FFB6C1;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 30px; /* ปรับมุมปุ่มให้กลม */
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s; /* เอฟเฟกต์การเปลี่ยนสีและขยายปุ่ม */
+  margin: 20px 0;
+}
+
+button:hover {
+  background-color: #FF69B4;
+  transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อเลื่อนเมาส์ไป */
+}
+
+/* ช่องกรอกข้อความ */
+input[type="text"] {
+  padding: 12px;
+  margin: 15px 0;
+  width: 300px;
+  border-radius: 20px; /* ขอบมนให้สวยงาม */
+  border: 2px solid #FF69B4;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #FF69B4; /* เมื่อกรอกข้อความ Border เปลี่ยนเป็นสีชมพูสด */
+}
+
+/* ส่วน Footer */
+footer {
+  text-align: center;
+  background-color: #FFB6C1;
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+  border-top: 5px solid #FF69B4;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับ footer */
+  margin-top: 40px;
+}
+
+/* รูปแบบการจัดวางสำหรับมือถือ */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* ปรับขนาดฟอนต์สำหรับมือถือ */
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+/* ป๊อบอัพ */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* สร้างพื้นหลังโปร่งแสง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* ให้ป๊อบอัพแสดงอยู่บนสุด */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+
+#closePopupButton {
+  background-color: #FF69B4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#closePopupButton:hover {
+  background-color: #FFB6C1;
+}
+
+/* ฟอร์มด่าแฟนเก่า */
+#insult-form textarea {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #FF69B4;
+  resize: none;
+}
+
+#sendMessageButton {
+  background-color: #FFB6C1;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 20px 0;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#sendMessageButton:hover {
+  background-color: #FF69B4;
+  transform: scale(1.1);
+}

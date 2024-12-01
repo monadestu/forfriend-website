@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORFRIEND</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>FORFRIEND</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">หน้าหลัก</a></li>
+        <li><a href="#advice">คำแนะนำในการรับมือ</a></li>
+        <li><a href="#horoscope">ดูดวงประจำวัน</a></li>
+        <li><a href="#food-advice">ผู้ช่วยพิเศษ</a></li>
+        <li><a href="#insult-form">ด่าแฟนเก่า</a></li> <!-- ลิงก์ไปยังหน้าด่าแฟนเก่า -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section id="home">
+    <h2>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h2>
+    <p>เว็บไซต์นี้สร้างขึ้นเพื่อเป็นกำลังใจและเตือนสติเพื่อนไม่ให้กลับไปหาแฟนเก่า</p>
+  </section>
+
+  <section id="advice">
+    <h2>คำแนะนำในการรับมือ</h2>
+    <p>ลองบล็อกไลน์ ทักไปบ่นกับเพื่อนให้ช่วยด่า หรือหาคนเสว ๆ ใหม่ แต่ถ้ายังไม่ดีขึ้นลองหากิจกรรมอื่นอย่างเช่น</p>
+    <button id="view-series">หาซีรี่ย์ที่น่าสนใจ</button>
+    <button id="view-places">ดูสถานที่ปฏิบัติธรรมในกรุงเทพ</button>
+    <button id="view-buffet">หาร้านเติมน้ำตาล</button>
+
+    <div id="advice-details" class="advice-details">
+      <!-- ผลลัพธ์จะถูกใส่ที่นี่ -->
+    </div>
+  </section>
+
+  <!-- กินอะไรดี -->
+  <section id="food-advice">
+    <h2>กินอะไรดี?</h2>
+    <p>ไม่รู้จะกินอะไรใช่มั้ย? กดสุ่มเมนูข้าวตรงนี้เลย!</p>
+    <button id="random-food-btn">สุ่มเมนูอาหาร</button>
+    <div id="random-food-result">
+      <!-- ผลลัพธ์เมนูอาหารจะถูกแสดงที่นี่ -->
+    </div>
+
+    <h3>เลือกอะไรดี?</h3>
+    <p>ไม่รู้จะเลือกอะไรดีใช่มั้ย? กรอกข้อความในทั้งสองช่องด้านล่างเพื่อให้เราช่วยเลือกเลย!</p>
+    <input type="text" id="food-option-1" placeholder="กรอกของที่ต้องการเลือก 1">
+    <input type="text" id="food-option-2" placeholder="กรอกของที่ต้องการเลือก 2">
+    <button id="choose-food-btn">สุ่ม</button>
+    <div id="chosen-food-result">
+      <!-- ผลลัพธ์การเลือก -->
+    </div>
+  </section>
+
+  <!-- ด่าแฟนเก่า -->
+  <section id="insult-form">
+    <h2>อยากด่าแฟนเก่า?</h2>
+    <p>ไม่ต้องเก็บไว้ในใจ! พิมพ์ข้อความแล้วคลิกส่ง!</p>
+    <textarea id="oldExMessage" placeholder="พิมพ์ข้อความ..." rows="5"></textarea>
+    <button id="sendMessageButton">ส่งข้อความ</button>
+
+    <!-- ป๊อบอัพกำลังใจ -->
+    <div id="popupMessage" class="popup" style="display:none;">
+      <div class="popup-content">
+        <!-- ข้อความจะถูกอัปเดตจาก JavaScript -->
+        <p>ขอให้คุณเข้มแข็งนะ ทุกอย่างจะดีขึ้น</p>
+        <button id="closePopupButton">ปิด</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ดูดวงประจำวัน -->
+  <section id="horoscope">
+    <h2>ดูดวงประจำวัน</h2>
+    <button id="load-horoscope">ดูดวงความรักวันนี้</button>
+    <div id="horoscope-result">
+      <!-- ดวงประจำวันจะแสดงที่นี่ -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 FORFRIEND</p>
+  </footer>
+
+  <!-- ลิงก์ไปยังไฟล์ JavaScript ที่นี่ -->
+  <script src="script.js"></script> 
+
+</body>
+</html>
